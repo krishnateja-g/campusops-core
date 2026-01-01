@@ -16,10 +16,11 @@ app.get("/", (req, res) => {
 });
 
 // API routes
-app.use("/api", healthRoutes);
-app.use("/api/auth", authRoutes);
-app.use("/api", userRoutes);
-app.use("/api/admin", adminRoutes);
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/admin", adminRoutes);
+app.use("/api/v1", userRoutes);
+app.use("/api/v1", healthRoutes);
+
 
 app.use(errorHandler);
 
