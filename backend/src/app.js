@@ -1,5 +1,6 @@
 import express from "express";
 import healthRoutes from "./routes/healthRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 
@@ -12,5 +13,6 @@ app.get("/", (req, res) => {
 
 // API routes
 app.use("/api", healthRoutes);
+app.use("/api/auth", authRoutes);
 
 export default app;
